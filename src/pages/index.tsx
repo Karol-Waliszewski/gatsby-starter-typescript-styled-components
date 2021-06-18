@@ -2,9 +2,12 @@ import * as React from 'react'
 import { Link, PageProps, graphql } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 
-import Layout from '../components/layout/layout'
-import Seo from '../components/layout/seo'
-import LazyImage from '../components/lazyImage'
+import Layout from 'components/layout/layout'
+import Seo from 'components/layout/seo'
+import Image from 'components/image'
+import LazyImage from 'components/lazyImage'
+
+import astronautImage from 'images/gatsby-astronaut.png'
 
 type DataProps = {
   site: {
@@ -20,11 +23,23 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data, path }) => {
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
+      <h2>Standard image</h2>
+      <Image
+        src={astronautImage}
+        alt="A Gatsby astronaut"
+        width={500}
+        height={300}
+        objectFit="contain"
+        objectPosition="center"
+      />
+      <h2>Lazy image</h2>
       <LazyImage
         src={data.astronaut}
         alt="A Gatsby astronaut"
         objectFit="contain"
         width={500}
+        height={300}
+        objectPosition="center"
       />
       <p>
         You're currently on the page "{path}" which was built on{' '}

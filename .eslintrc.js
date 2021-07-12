@@ -19,13 +19,13 @@ module.exports = {
     // Disable unescaped entities checking
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    // Enable prettier rules
-    'prettier/prettier': 'error',
     // interface start with capital I
     '@typescript-eslint/interface-name-prefix': 'off',
     // allow "any" as type
     '@typescript-eslint/no-explicit-any': 'off',
     // allow @ts-ignore for testing purposes
     '@typescript-eslint/ban-ts-ignore': 'off',
+    // Enable prettier rules
+    'prettier/prettier': 'error',
   },
 }

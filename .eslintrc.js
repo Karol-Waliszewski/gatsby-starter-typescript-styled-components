@@ -18,6 +18,8 @@ module.exports = {
     'react/prop-types': 'off',
     // Disable unescaped entities checking
     'react/no-unescaped-entities': 'off',
+    // Disable because of performance issues
+    '@typescript-eslint/no-implied-eval': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     // interface start with capital I
     '@typescript-eslint/interface-name-prefix': 'off',
